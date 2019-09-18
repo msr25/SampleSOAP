@@ -1471,7 +1471,7 @@
          <web:sCountryISOCode>${#Project#CountryName}</web:sCountryISOCode>
       </web:CapitalCity>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:assertion type="Simple Contains" id="bb820f98-4e85-451b-93c4-51c85faf3984" name="Contains"><con:configuration><token/><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="http://www.oorsprong.org/websamples.countryinfo/CountryInfoServiceSoapType/CapitalCityRequest" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:setupScript>log.info ("This runs before every test suites")</con:setupScript><con:tearDownScript>log.info ("This runs before every test suites")</con:tearDownScript><con:properties><con:property><con:name>Name</con:name><con:value>TestCase Property</con:value></con:property></con:properties></con:testCase><con:testCase id="e32923f2-7d0b-41c4-a89f-13b7afca51ec" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="CountriesUsingCurrency TestCase" searchProperties="true"><con:settings/><con:testStep type="request" id="a01065a3-dc50-4f20-8805-271924ba77a9" name="CountriesUsingCurrency"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>CountryInfoServiceSoapBinding</con:interface><con:operation>CountriesUsingCurrency</con:operation><con:request name="CountriesUsingCurrency" id="c259a4cf-70db-40d3-9bd3-e393c0cb1394"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://www.oorsprong.org/websamples.countryinfo">
+</soapenv:Envelope>]]></con:request><con:assertion type="Simple Contains" id="bb820f98-4e85-451b-93c4-51c85faf3984" name="Contains"><con:configuration><token/><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="http://www.oorsprong.org/websamples.countryinfo/CountryInfoServiceSoapType/CapitalCityRequest" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="groovy" name="Groovy Script" id="f2e1e57b-4074-483f-bb8a-7e7575db353d"><con:settings/><con:config><script/></con:config></con:testStep><con:setupScript>log.info ("This runs before every test suites")</con:setupScript><con:tearDownScript>log.info ("This runs before every test suites")</con:tearDownScript><con:properties><con:property><con:name>Name</con:name><con:value>TestCase Property</con:value></con:property></con:properties></con:testCase><con:testCase id="e32923f2-7d0b-41c4-a89f-13b7afca51ec" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="CountriesUsingCurrency TestCase" searchProperties="true"><con:settings/><con:testStep type="request" id="a01065a3-dc50-4f20-8805-271924ba77a9" name="CountriesUsingCurrency"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>CountryInfoServiceSoapBinding</con:interface><con:operation>CountriesUsingCurrency</con:operation><con:request name="CountriesUsingCurrency" id="c259a4cf-70db-40d3-9bd3-e393c0cb1394"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://www.oorsprong.org/websamples.countryinfo">
    <soapenv:Header/>
    <soapenv:Body>
       <web:CountriesUsingCurrency>
@@ -1721,4 +1721,334 @@ log.info ("Property name is : "+name);</script></con:config></con:testStep><con:
    <soapenv:Body>
       <web:ListOfLanguagesByName/>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig action="http://www.oorsprong.org/websamples.countryinfo/CountryInfoServiceSoapType/ListOfLanguagesByNameRequest" mustUnderstand="NONE" version="200508"/></con:request></con:config></con:testStep><con:testStep type="groovy" name="GetSetProperties" id="39055622-c9f8-4478-a624-6c8017532623"><con:settings/><con:config><script/></con:config></con:testStep><con:loadTest id="3294106c-3400-4aef-b298-8db2988a2525" name="LoadTest 1"><con:settings><con:setting id="HttpSettings@close-connections">false</con:setting></con:settings><con:threadCount>5</con:threadCount><con:startDelay>0</con:startDelay><con:sampleInterval>250</con:sampleInterval><con:calculateTPSOnTimePassed>true</con:calculateTPSOnTimePassed><con:resetStatisticsOnThreadCountChange>true</con:resetStatisticsOnThreadCountChange><con:historyLimit>-1</con:historyLimit><con:testLimit>60</con:testLimit><con:limitType>TIME</con:limitType><con:loadStrategy><con:type>Simple</con:type></con:loadStrategy><con:assertion type="Step Status" name="Step Status"/><con:maxAssertionErrors>100</con:maxAssertionErrors><con:cancelExcessiveThreads>true</con:cancelExcessiveThreads><con:strategyInterval>500</con:strategyInterval></con:loadTest><con:properties><con:property><con:name>CountryCode</con:name><con:value>JP</con:value></con:property><con:property><con:name>Name</con:name><con:value>Property</con:value></con:property></con:properties><con:securityTest id="b5639ceb-f141-45ac-9014-50f5c7f32d16" name="SecurityTest 1" failOnError="true"><con:settings/><con:properties/></con:securityTest></con:testCase><con:properties><con:property><con:name>CountryCode</con:name><con:value>TW</con:value></con:property><con:property><con:name>Name</con:name><con:value>Property</con:value></con:property><con:property><con:name>CountryName</con:name><con:value>USA</con:value></con:property></con:properties></con:testSuite><con:properties><con:property><con:name>Name</con:name><con:value>Project property</con:value></con:property><con:property><con:name>CountryName</con:name><con:value>FR</con:value></con:property></con:properties><con:encryptedContent xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:beforeRunScript>log.info ("This runs before every test suites")</con:beforeRunScript><con:afterRunScript>log.info ("This runs after every test suites")</con:afterRunScript><con:sensitiveInformation/></con:soapui-project>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig action="http://www.oorsprong.org/websamples.countryinfo/CountryInfoServiceSoapType/ListOfLanguagesByNameRequest" mustUnderstand="NONE" version="200508"/></con:request></con:config></con:testStep><con:testStep type="groovy" name="GetSetProperties" id="39055622-c9f8-4478-a624-6c8017532623"><con:settings/><con:config><script/></con:config></con:testStep><con:loadTest id="3294106c-3400-4aef-b298-8db2988a2525" name="LoadTest 1"><con:settings><con:setting id="HttpSettings@close-connections">false</con:setting></con:settings><con:threadCount>5</con:threadCount><con:startDelay>0</con:startDelay><con:sampleInterval>250</con:sampleInterval><con:calculateTPSOnTimePassed>true</con:calculateTPSOnTimePassed><con:resetStatisticsOnThreadCountChange>true</con:resetStatisticsOnThreadCountChange><con:historyLimit>-1</con:historyLimit><con:testLimit>60</con:testLimit><con:limitType>TIME</con:limitType><con:loadStrategy><con:type>Simple</con:type></con:loadStrategy><con:assertion type="Step Status" name="Step Status"/><con:maxAssertionErrors>100</con:maxAssertionErrors><con:cancelExcessiveThreads>true</con:cancelExcessiveThreads><con:strategyInterval>500</con:strategyInterval></con:loadTest><con:properties><con:property><con:name>CountryCode</con:name><con:value>JP</con:value></con:property><con:property><con:name>Name</con:name><con:value>Property</con:value></con:property></con:properties><con:securityTest id="b5639ceb-f141-45ac-9014-50f5c7f32d16" name="SecurityTest 1" failOnError="true"><con:settings/><con:properties/></con:securityTest></con:testCase><con:properties><con:property><con:name>CountryCode</con:name><con:value>TW</con:value></con:property><con:property><con:name>Name</con:name><con:value>Property</con:value></con:property><con:property><con:name>CountryName</con:name><con:value>USA</con:value></con:property></con:properties></con:testSuite><con:testSuite id="ceb9ed69-357d-4df6-8675-53859db30217" name="TestSuite 3"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="50d43d0c-9e10-4dca-bbd8-dfaacbc1fc4e" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase 1" searchProperties="true"><con:settings/><con:testStep type="request" id="b85cd6b0-881e-4b50-b7bf-9227be26ab66" name="CapitalCity - Request 1"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>CountryInfoServiceSoapBinding</con:interface><con:operation>CapitalCity</con:operation><con:request name="CapitalCity - Request 1" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="786058c6-5e29-49a2-be94-19c4317d71da"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso</con:endpoint><con:request><![CDATA[<con:soapui-project id="7aeae59b-f2f6-4ea4-9337-e77e54553cca" activeEnvironment="Default" name="REST Project 1" resourceRoot="" soapui-version="5.5.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config">
+   <con:settings>
+      <con:setting id="com.eviware.soapui.impl.wsdl.actions.iface.tools.soapui.TestRunnerAction@values-local"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Report Format(s)" value=""/>
+  <con:entry key="Host:Port" value=""/>
+  <con:entry key="Export JUnit Results" value="false"/>
+  <con:entry key="Export All" value="false"/>
+  <con:entry key="Save After" value="false"/>
+  <con:entry key="Add Settings" value="false"/>
+  <con:entry key="WSS Password Type" value=""/>
+  <con:entry key="TestSuite" value="TestSuite 1"/>
+  <con:entry key="Endpoint" value=""/>
+  <con:entry key="Select Report Type" value=""/>
+  <con:entry key="System Properties" value=""/>
+  <con:entry key="Password" value=""/>
+  <con:entry key="Print Report" value="false"/>
+  <con:entry key="Open Report" value="false"/>
+  <con:entry key="Export JUnit Results with test properties" value="false"/>
+  <con:entry key="Global Properties" value=""/>
+  <con:entry key="Project Properties" value=""/>
+  <con:entry key="Project Password" value=""/>
+  <con:entry key="TestCase" value="TestCase 2"/>
+  <con:entry key="Username" value=""/>
+  <con:entry key="user-settings.xml Password" value=""/>
+  <con:entry key="TestRunner Path" value=""/>
+  <con:entry key="Environment" value="Default"/>
+  <con:entry key="Coverage Report" value="false"/>
+  <con:entry key="Enable UI" value="false"/>
+  <con:entry key="Root Folder" value=""/>
+  <con:entry key="Ignore Errors" value="false"/>
+  <con:entry key="Domain" value=""/>
+  <con:entry key="Tool Args" value=""/>
+  <con:entry key="Save Project" value="false"/>
+</xml-fragment>]]]]>><![CDATA[</con:setting>
+   </con:settings>
+   <con:interface xsi:type="con:RestService" id="6c5c7c25-ecde-4e65-9b43-7ca556f9441f" wadlVersion="http://wadl.dev.java.net/2009/02" name="https://restcountries.eu" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:settings/>
+      <con:definitionCache/>
+      <con:endpoints>
+         <con:endpoint>https://restcountries.eu</con:endpoint>
+      </con:endpoints>
+      <con:resource name="All" path="/rest/v2/all" id="462a7a46-aa9c-4570-8cd4-2edfbf07f5b3">
+         <con:settings/>
+         <con:parameters/>
+         <con:method name="All 1" id="60349456-21d5-4ae3-a5eb-415088e0a525" method="POST">
+            <con:settings/>
+            <con:parameters/>
+            <con:representation type="RESPONSE">
+               <con:mediaType>application/json;charset=utf-8</con:mediaType>
+               <con:status>200</con:status>
+               <con:params/>
+               <con:element>Response</con:element>
+            </con:representation>
+            <con:request name="Request 1" id="12611372-d21d-492d-b892-228439916d20" mediaType="application/json" postQueryString="false">
+               <con:settings>
+                  <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+               </con:settings>
+               <con:endpoint>https://restcountries.eu</con:endpoint>
+               <con:request/>
+               <con:originalUri>https://restcountries.eu/rest/v2/all</con:originalUri>
+               <con:credentials>
+                  <con:authType>No Authorization</con:authType>
+               </con:credentials>
+               <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+               <con:jmsPropertyConfig/>
+               <con:parameters/>
+               <con:parameterOrder/>
+            </con:request>
+         </con:method>
+      </con:resource>
+   </con:interface>
+   <con:interface xsi:type="con:RestService" id="79e4b758-2ecd-4a5d-bb9e-4805bc43929a" wadlVersion="http://wadl.dev.java.net/2009/02" name="https://restcountries.eu" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:settings/>
+      <con:definitionCache type="TEXT" rootPart=""/>
+      <con:endpoints>
+         <con:endpoint>https://restcountries.eu</con:endpoint>
+      </con:endpoints>
+      <con:resource name="Tallinn" path="/rest/v2/capital/washington" id="ff40c808-a854-428d-8e3b-74d87e70fc95">
+         <con:settings/>
+         <con:parameters/>
+         <con:method name="Tallinn 1" id="20d97900-d7af-4755-99b4-83141ae2b80e" method="GET">
+            <con:settings/>
+            <con:parameters/>
+            <con:representation type="RESPONSE">
+               <con:mediaType>application/json;charset=utf-8</con:mediaType>
+               <con:status>200</con:status>
+               <con:params/>
+               <con:element>Response</con:element>
+            </con:representation>
+            <con:request name="Request 1" id="a34da5d2-a688-4c99-b85c-18e32d25143a" mediaType="application/json">
+               <con:settings>
+                  <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+               </con:settings>
+               <con:endpoint>https://restcountries.eu</con:endpoint>
+               <con:request/>
+               <con:originalUri>https://restcountries.eu/rest/v2/capital/tallinn</con:originalUri>
+               <con:credentials>
+                  <con:authType>No Authorization</con:authType>
+               </con:credentials>
+               <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+               <con:jmsPropertyConfig/>
+               <con:parameters/>
+            </con:request>
+         </con:method>
+      </con:resource>
+   </con:interface>
+   <con:interface xsi:type="con:RestService" id="c6fc60cc-ad7b-4699-bc30-cf3e4c3bf07c" wadlVersion="http://wadl.dev.java.net/2009/02" name="https://restcountries.eu" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:settings/>
+      <con:definitionCache/>
+      <con:endpoints>
+         <con:endpoint>https://restcountries.eu</con:endpoint>
+      </con:endpoints>
+      <con:resource name="Aruba" path="/rest/v2/name/aruba" id="09a3cad6-c4f6-44e8-981f-d251074ebbee">
+         <con:settings/>
+         <con:parameters>
+            <con:parameter>
+               <con:name>fullText</con:name>
+               <con:value>true</con:value>
+               <con:style>QUERY</con:style>
+               <con:default>true</con:default>
+               <con:path xsi:nil="true"/>
+               <con:description xsi:nil="true"/>
+            </con:parameter>
+         </con:parameters>
+         <con:method name="Aruba 1" id="e28de783-5c87-450d-910a-f21d24ed500a" method="GET">
+            <con:settings/>
+            <con:parameters/>
+            <con:representation type="RESPONSE">
+               <con:mediaType>application/json;charset=utf-8</con:mediaType>
+               <con:status>200</con:status>
+               <con:params/>
+               <con:element>Response</con:element>
+            </con:representation>
+            <con:request name="Request 1" id="89c80b4c-dbad-4e74-a88e-f250582dbdf6" mediaType="application/json">
+               <con:settings>
+                  <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+               </con:settings>
+               <con:endpoint>https://restcountries.eu</con:endpoint>
+               <con:request/>
+               <con:originalUri>https://restcountries.eu/rest/v2/name/aruba</con:originalUri>
+               <con:credentials>
+                  <con:authType>No Authorization</con:authType>
+               </con:credentials>
+               <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+               <con:jmsPropertyConfig/>
+               <con:parameters>
+                  <entry key="fullText" value="false" xmlns="http://eviware.com/soapui/config"/>
+               </con:parameters>
+               <con:parameterOrder>
+                  <con:entry>fullText</con:entry>
+               </con:parameterOrder>
+            </con:request>
+         </con:method>
+      </con:resource>
+   </con:interface>
+   <con:interface xsi:type="con:RestService" id="50821a63-7511-4c6d-b7d5-2e2f3fefd1d7" wadlVersion="http://wadl.dev.java.net/2009/02" name="https://restcountries.eu" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:settings/>
+      <con:definitionCache/>
+      <con:endpoints>
+         <con:endpoint>https://restcountries.eu</con:endpoint>
+      </con:endpoints>
+      <con:resource name="Parameters" path="/rest/v2/name/{Countryname}" id="4fdd22f3-a5db-4c73-90ae-a1a21d811ee5">
+         <con:settings/>
+         <con:parameters>
+            <con:parameter>
+               <con:name>Countryname</con:name>
+               <con:value/>
+               <con:style>TEMPLATE</con:style>
+               <con:default/>
+               <con:description xsi:nil="true"/>
+            </con:parameter>
+         </con:parameters>
+         <con:method name="United 1" id="f19bbb71-9d9e-4dba-9b85-3787b7286bd7" method="GET">
+            <con:settings/>
+            <con:parameters/>
+            <con:representation type="RESPONSE">
+               <con:mediaType>application/json;charset=utf-8</con:mediaType>
+               <con:status>200</con:status>
+               <con:params/>
+               <con:element>Response</con:element>
+            </con:representation>
+            <con:representation type="FAULT">
+               <con:mediaType xsi:nil="true"/>
+               <con:status>404</con:status>
+               <con:params/>
+               <con:element>data</con:element>
+            </con:representation>
+            <con:request name="Request 1" id="ce2425a4-83ad-4848-93e3-d312ca3190e0" mediaType="application/json">
+               <con:settings>
+                  <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+               </con:settings>
+               <con:endpoint>https://restcountries.eu</con:endpoint>
+               <con:request/>
+               <con:originalUri>https://restcountries.eu/rest/v2/name/united</con:originalUri>
+               <con:credentials>
+                  <con:authType>No Authorization</con:authType>
+               </con:credentials>
+               <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+               <con:jmsPropertyConfig/>
+               <con:parameters>
+                  <entry key="Countryname" value="USA" xmlns="http://eviware.com/soapui/config"/>
+               </con:parameters>
+               <con:parameterOrder>
+                  <con:entry>Countryname</con:entry>
+               </con:parameterOrder>
+            </con:request>
+         </con:method>
+      </con:resource>
+   </con:interface>
+   <con:testSuite id="8ab4e7e0-2ca8-4594-bcbc-b67c62a0fb39" name="TestSuite 1">
+      <con:settings/>
+      <con:runType>SEQUENTIAL</con:runType>
+      <con:testCase id="6a2dfba9-b3b9-42f7-885c-3e933ae0ee59" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase 1" searchProperties="true">
+         <con:description>kjshdiugs;FOHSFD</con:description>
+         <con:settings/>
+         <con:testStep type="restrequest" name="All 1 - Request 1" id="b3d91b82-0f3e-4712-9ce9-46be912aaf0c">
+            <con:settings/>
+            <con:config service="https://restcountries.eu" resourcePath="/rest/v2/all" methodName="All 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+               <con:restRequest name="All 1 - Request 1" id="12611372-d21d-492d-b892-228439916d20" mediaType="application/json" postQueryString="false">
+                  <con:settings>
+                     <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+                  </con:settings>
+                  <con:endpoint>https://restcountries.eu</con:endpoint>
+                  <con:request/>
+                  <con:originalUri>https://restcountries.eu/rest/v2/all</con:originalUri>
+                  <con:credentials>
+                     <con:authType>No Authorization</con:authType>
+                  </con:credentials>
+                  <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                  <con:jmsPropertyConfig/>
+                  <con:parameters/>
+                  <con:parameterOrder/>
+               </con:restRequest>
+            </con:config>
+         </con:testStep>
+         <con:properties>
+            <con:property>
+               <con:name>Name</con:name>
+               <con:value>Test case property</con:value>
+            </con:property>
+         </con:properties>
+      </con:testCase>
+      <con:testCase id="a80298c4-7f7a-468d-b880-bdafb4580d97" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase 2" searchProperties="true">
+         <con:settings/>
+         <con:testStep type="restrequest" name="Tallinn 1 - Request 1" id="46d9c87d-57c4-4471-86b1-a2b48834a336">
+            <con:settings/>
+            <con:config service="https://restcountries.eu" resourcePath="/rest/v2/capital/washington" methodName="Tallinn 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+               <con:restRequest name="Tallinn 1 - Request 1" id="a34da5d2-a688-4c99-b85c-18e32d25143a" mediaType="application/json">
+                  <con:settings>
+                     <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+                  </con:settings>
+                  <con:endpoint>https://restcountries.eu</con:endpoint>
+                  <con:request/>
+                  <con:originalUri>https://restcountries.eu/rest/v2/capital/tallinn</con:originalUri>
+                  <con:credentials>
+                     <con:authType>No Authorization</con:authType>
+                  </con:credentials>
+                  <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                  <con:jmsPropertyConfig/>
+                  <con:parameters/>
+               </con:restRequest>
+            </con:config>
+         </con:testStep>
+         <con:testStep type="restrequest" name="Aruba 1 - Request 1" id="495f111f-9cb5-4b29-b3d6-2087b43a4c19">
+            <con:settings/>
+            <con:config service="https://restcountries.eu" resourcePath="/rest/v2/name/aruba" methodName="Aruba 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+               <con:restRequest name="Aruba 1 - Request 1" id="89c80b4c-dbad-4e74-a88e-f250582dbdf6" mediaType="application/json">
+                  <con:settings>
+                     <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+                  </con:settings>
+                  <con:endpoint>https://restcountries.eu</con:endpoint>
+                  <con:request/>
+                  <con:originalUri>https://restcountries.eu/rest/v2/name/aruba</con:originalUri>
+                  <con:credentials>
+                     <con:authType>No Authorization</con:authType>
+                  </con:credentials>
+                  <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                  <con:jmsPropertyConfig/>
+                  <con:parameters>
+                     <entry key="fullText" value="false" xmlns="http://eviware.com/soapui/config"/>
+                  </con:parameters>
+                  <con:parameterOrder>
+                     <con:entry>fullText</con:entry>
+                  </con:parameterOrder>
+               </con:restRequest>
+            </con:config>
+         </con:testStep>
+         <con:testStep type="restrequest" name="United 1 - Request 1" id="3ab5deec-d19f-4863-b420-a8a8aaac9767">
+            <con:settings/>
+            <con:config service="https://restcountries.eu" resourcePath="/rest/v2/name/{Countryname}" methodName="United 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+               <con:restRequest name="United 1 - Request 1" id="ce2425a4-83ad-4848-93e3-d312ca3190e0" mediaType="application/json">
+                  <con:settings>
+                     <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+                  </con:settings>
+                  <con:endpoint>https://restcountries.eu</con:endpoint>
+                  <con:request/>
+                  <con:originalUri>https://restcountries.eu/rest/v2/name/united</con:originalUri>
+                  <con:credentials>
+                     <con:authType>No Authorization</con:authType>
+                  </con:credentials>
+                  <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                  <con:jmsPropertyConfig/>
+                  <con:parameters>
+                     <entry key="Countryname" value="USA" xmlns="http://eviware.com/soapui/config"/>
+                  </con:parameters>
+                  <con:parameterOrder>
+                     <con:entry>Countryname</con:entry>
+                  </con:parameterOrder>
+               </con:restRequest>
+            </con:config>
+         </con:testStep>
+         <con:properties/>
+      </con:testCase>
+      <con:properties>
+         <con:property>
+            <con:name>Name</con:name>
+            <con:value>I am test suite property</con:value>
+         </con:property>
+      </con:properties>
+   </con:testSuite>
+   <con:properties>
+      <con:property>
+         <con:name>Name</con:name>
+         <con:value>I am a project property</con:value>
+      </con:property>
+   </con:properties>
+   <con:wssContainer/>
+   <con:oAuth2ProfileContainer/>
+   <con:oAuth1ProfileContainer/>
+   <con:sensitiveInformation/>
+</con:soapui-project>]]></con:request><con:assertion type="SOAP Response" id="5b7ac7e1-9478-4ae7-b023-d44c271eed10" name="SOAP Response"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.oorsprong.org/websamples.countryinfo/CountryInfoServiceSoapType/CapitalCityRequest"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="groovy" name="Groovy Script" id="89f0f401-0817-4bcb-9fa9-0ecde50f1429"><con:settings/><con:config><script/></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties><con:property><con:name>Name</con:name><con:value>Project property</con:value></con:property><con:property><con:name>CountryName</con:name><con:value>FR</con:value></con:property></con:properties><con:encryptedContent xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:beforeRunScript>log.info ("This runs before every test suites")</con:beforeRunScript><con:afterRunScript>log.info ("This runs after every test suites")</con:afterRunScript><con:sensitiveInformation/></con:soapui-project>
